@@ -3,13 +3,6 @@
 use i18n;
 use FormField;
 
-/**
- * HoneypotField.
- *
- * @author       Tom Densham <tom.densham@studiobonito.co.uk>
- * @copyright    Studio Bonito Ltd.
- * @package      StudioBonito\SilverStripe\SpamProtection\Honeypot\SpamProtectorField
- */
 class HoneypotField extends \HiddenField
 {
     /**
@@ -49,11 +42,9 @@ class HoneypotField extends \HiddenField
     }
 
     /**
-     * @codeCoverageIgnoreStart
-     */
-
-    /**
      * Override the Type to remove the class namespace.
+     *
+     * @codeCoverageIgnore
      *
      * @return string
      */
@@ -64,6 +55,8 @@ class HoneypotField extends \HiddenField
 
     /**
      * Override the Field to add the Captcha and Timestamp fields.
+     *
+     * @codeCoverageIgnore
      *
      * @param array $properties
      *
@@ -76,6 +69,8 @@ class HoneypotField extends \HiddenField
 
     /**
      * Create the Captcha Field.
+     *
+     * @codeCoverageIgnore
      *
      * @return string
      */
@@ -96,6 +91,8 @@ class HoneypotField extends \HiddenField
     /**
      * Create the Timestamp Field.
      *
+     * @codeCoverageIgnore
+     *
      * @return string
      */
     protected function createTimestampField()
@@ -111,8 +108,4 @@ class HoneypotField extends \HiddenField
             )
         );
     }
-
-    /**
-     * @codeCoverageIgnoreEnd
-     */
 } 

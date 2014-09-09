@@ -2,12 +2,6 @@
 
 use StudioBonito\SilverStripe\SpamProtection\Honeypot\FormField\HoneypotField;
 
-/**
- * HoneypotSpamProtector.
- *
- * @author       Tom Densham <tom.densham@studiobonito.co.uk>
- * @copyright    Studio Bonito Ltd.
- */
 class HoneypotSpamProtector implements \SpamProtector
 {
     /**
