@@ -3,13 +3,6 @@
 use i18n;
 use FormField;
 
-/**
- * HoneypotField.
- *
- * @author       Tom Densham <tom.densham@studiobonito.co.uk>
- * @copyright    Studio Bonito Ltd.
- * @package      StudioBonito\SilverStripe\SpamProtection\Honeypot\SpamProtectorField
- */
 class HoneypotField extends \HiddenField
 {
     /**
