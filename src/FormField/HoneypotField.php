@@ -49,11 +49,9 @@ class HoneypotField extends \HiddenField
     }
 
     /**
-     * @codeCoverageIgnoreStart
-     */
-
-    /**
      * Override the Type to remove the class namespace.
+     *
+     * @codeCoverageIgnore
      *
      * @return string
      */
@@ -64,6 +62,8 @@ class HoneypotField extends \HiddenField
 
     /**
      * Override the Field to add the Captcha and Timestamp fields.
+     *
+     * @codeCoverageIgnore
      *
      * @param array $properties
      *
@@ -76,6 +76,8 @@ class HoneypotField extends \HiddenField
 
     /**
      * Create the Captcha Field.
+     *
+     * @codeCoverageIgnore
      *
      * @return string
      */
@@ -96,6 +98,8 @@ class HoneypotField extends \HiddenField
     /**
      * Create the Timestamp Field.
      *
+     * @codeCoverageIgnore
+     *
      * @return string
      */
     protected function createTimestampField()
@@ -111,8 +115,4 @@ class HoneypotField extends \HiddenField
             )
         );
     }
-
-    /**
-     * @codeCoverageIgnoreEnd
-     */
 } 
