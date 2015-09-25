@@ -68,12 +68,13 @@ class HoneypotFieldTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return m\Expectation
+     * @return m\MockInterface
      */
     protected function getValidator()
     {
         $validator = m::mock('RequiredFields')
-            ->shouldReceive('validationError');
+            ->shouldReceive('validationError')
+            ->getMock();
 
         return $validator;
     }
