@@ -13,6 +13,7 @@ All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will 
 - Update Travis configuration (include PHP 5.6, 7 and HHVM).
 - Update PHPUnit configuration.
 - Include contributing guide.
+- Update readme.
 
 ### Fixed
 - Removed `composer.lock` file.
