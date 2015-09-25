@@ -1,7 +1,6 @@
 <?php namespace StudioBonito\SilverStripe\SpamProtection\Honeypot\FormField;
 
 use FormField;
-use i18n;
 
 class HoneypotField extends \HiddenField
 {
@@ -28,7 +27,7 @@ class HoneypotField extends \HiddenField
         if (!empty($this->value) || ($timeLimit > 0 && ($timestamp + $timeLimit) > time())) {
             $validator->validationError(
                 $this->name,
-                i18n::_t(
+                _t(
                     'HoneypotField.SPAM',
                     'Your submission has been rejected because it was treated as spam.'
                 ),
