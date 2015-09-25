@@ -6,6 +6,9 @@ All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will 
 ### Added
 - Included changelog.
 
+### Fixed
+- Removed `composer.lock` file.
+
 ## [1.0.1] - 2014-09-09
 ### Added
 - Included `silverstripe/spamprotection` version `~1.2.0` as a dependency.
