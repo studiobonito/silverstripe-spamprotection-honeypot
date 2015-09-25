@@ -8,6 +8,7 @@ All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will 
 - Included `.gitattributes` file.
 - Included `php` version `>=5.3.0` as a dependency.
 - Included `scrutinizer/ocular` version `~1.1` as a development dependency.
+- Updated license.
 
 ### Fixed
 - Removed `composer.lock` file.
