@@ -10,6 +10,7 @@ All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will 
 - Included `scrutinizer/ocular` version `~1.1` as a development dependency.
 - Updated license.
 - Update Scrutinizer configuration.
+- Update Travis configuration (include PHP 5.6, 7 and HHVM).
 
 ### Fixed
 - Removed `composer.lock` file.
