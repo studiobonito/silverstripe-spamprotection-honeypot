@@ -19,6 +19,7 @@ All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will 
 - Removed `composer.lock` file.
 - Updated `.gitignore` file.
 - Updated `composer.json` file.
+- Improved PSR-1 and PSR-2 conformance.
 
 ## [1.0.1] - 2014-09-09
 ### Added
