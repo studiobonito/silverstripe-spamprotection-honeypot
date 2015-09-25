@@ -5,6 +5,7 @@ All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will 
 ## [Unreleased]
 ### Added
 - Included changelog.
+- Included `.gitattributes` file.
 
 ### Fixed
 - Removed `composer.lock` file.
