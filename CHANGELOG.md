@@ -14,6 +14,7 @@ All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will 
 - Update PHPUnit configuration.
 - Include contributing guide.
 - Update readme.
+- Included test case for failed validation.
 
 ### Fixed
 - Removed `composer.lock` file.
