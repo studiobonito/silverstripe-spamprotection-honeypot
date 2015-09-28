@@ -1,6 +1,5 @@
 <?php namespace StudioBonito\SilverStripe\SpamProtection\Honeypot\FormField;
 
-use i18n;
 use FormField;
 
 class HoneypotField extends \HiddenField
@@ -28,7 +27,7 @@ class HoneypotField extends \HiddenField
         if (!empty($this->value) || ($timeLimit > 0 && ($timestamp + $timeLimit) > time())) {
             $validator->validationError(
                 $this->name,
-                i18n::_t(
+                _t(
                     'HoneypotField.SPAM',
                     'Your submission has been rejected because it was treated as spam.'
                 ),
@@ -79,11 +78,11 @@ class HoneypotField extends \HiddenField
         return FormField::create_tag(
             'input',
             array(
-                'type'      => 'text',
-                'id'        => $this->ID(),
-                'name'      => $this->getName(),
-                'value'     => $this->Value(),
-                'style'     => 'display:none!important'
+                'type'  => 'text',
+                'id'    => $this->ID(),
+                'name'  => $this->getName(),
+                'value' => $this->Value(),
+                'style' => 'display:none!important',
             )
         );
     }
@@ -100,12 +99,12 @@ class HoneypotField extends \HiddenField
         return FormField::create_tag(
             'input',
             array(
-                'type'      => 'text',
-                'id'        => $this->ID() . '_Timestamp',
-                'name'      => $this->getName() . '_Timestamp',
-                'value'     => time(),
-                'style'     => 'display:none!important'
+                'type'  => 'text',
+                'id'    => $this->ID() . '_Timestamp',
+                'name'  => $this->getName() . '_Timestamp',
+                'value' => time(),
+                'style' => 'display:none!important',
             )
         );
     }
-} 
+}

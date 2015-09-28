@@ -30,5 +30,8 @@ class HoneypotSpamProtector implements \SpamProtector
      *
      * @codeCoverageIgnore
      */
-    public function setFieldMapping($fieldMapping) {}
+    public function setFieldMapping($fieldMapping)
+    {
+        //
+    }
 }

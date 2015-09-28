@@ -2,27 +2,44 @@
     "name": "studiobonito/silverstripe-spamprotection-honeypot",
     "description": "Provide Honeypot spam protection for SilverStripe CMS.",
     "type": "silverstripe-module",
-    "keywords": ["silverstripe", "spam", "protection", "honeypot", "form"],
+    "keywords": [
+        "studiobonito",
+        "silverstripe-spamprotection-honeypot",
+        "silverstripe",
+        "spam",
+        "protection",
+        "honeypot",
+        "form"
+    ],
+    "homepage": "https://github.com/studiobonito/silverstripe-spamprotection-honeypot",
     "license": "BSD-2-Clause",
     "authors": [
         {
             "name": "Tom Densham",
-            "email": "tom.densham@studiobonito.co.uk"
+            "email": "tom.densham@studiobonito.co.uk",
+            "homepage": "http://www.studiobonito.co.uk",
+            "role": "Developer"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "StudioBonito\\SilverStripe\\SpamProtection\\Honeypot\\": "src/",
-            "StudioBonito\\SilverStripe\\SpamProtection\\Honeypot\\Tests\\": "tests/"
-        }
-    },
     "require": {
+        "php": ">=5.3.0",
         "silverstripe/framework": "~3.1.0",
         "silverstripe/spamprotection": "~1.2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~3.7.0",
-        "mockery/mockery": "~0.9.0",
-        "symfony/class-loader": "~2.3"
+        "phpunit/phpunit": "4.*",
+        "mockery/mockery": "0.9.*",
+        "symfony/class-loader": "~2.3",
+        "scrutinizer/ocular": "~1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "StudioBonito\\SilverStripe\\SpamProtection\\Honeypot\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "StudioBonito\\SilverStripe\\SpamProtection\\Honeypot\\Tests\\": "tests"
+        }
     }
 }

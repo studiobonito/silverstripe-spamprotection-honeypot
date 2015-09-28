@@ -1,3 +1,7 @@
-/framework
-/spamprotection
-/vendor
+build
+composer.lock
+docs
+framework
+cms
+spamprotection
+vendor

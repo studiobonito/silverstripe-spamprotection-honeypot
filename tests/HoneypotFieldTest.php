@@ -13,6 +13,23 @@ class HoneypotFieldTest extends \PHPUnit_Framework_TestCase
     /**
      * @covers StudioBonito\SilverStripe\SpamProtection\Honeypot\FormField\HoneypotField::validate
      */
+    public function testInvalidWithCaptcha()
+    {
+        $form = $this->getForm();
+        $validator = $this->getValidator();
+
+        $honeypotField = new HoneypotField('Captcha');
+        $honeypotField->setForm($form);
+        $honeypotField->setValue('foobar');
+
+        $valid = $honeypotField->validate($validator);
+
+        $this->assertFalse($valid);
+    }
+
+    /**
+     * @covers StudioBonito\SilverStripe\SpamProtection\Honeypot\FormField\HoneypotField::validate
+     */
     public function testValidWithEmptyCaptcha()
     {
         $form = $this->getForm();
@@ -51,14 +68,14 @@ class HoneypotFieldTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @return m\Expectation
+     * @return m\MockInterface
      */
     protected function getValidator()
     {
         $validator = m::mock('RequiredFields')
-            ->shouldReceive('validationError');
+            ->shouldReceive('validationError')
+            ->getMock();
 
         return $validator;
     }
 }
- 
