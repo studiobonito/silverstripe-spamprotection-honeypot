@@ -24,13 +24,38 @@ Also invalidate submissions that respond to quickly.
 
 Run the following to add this module as a requirement and install it via composer.
 
-``` bash
+```bash
 $ composer require studiobonito/silverstripe-spamprotection-honeypot
 ```
 
 ### Manually
 
 Copy the 'silverstripe-spamprotection-honeypot' folder to the root of your SilverStripe installation.
+
+## Usage
+
+Create a configuration file `spamprotection.yml` in `mysite/_config` with the following configuration.
+
+```yaml
+---
+name: spamprotection
+---
+FormSpamProtectionExtension:
+  default_spam_protector: '\StudioBonito\SilverStripe\SpamProtection\Honeypot\SpamProtector\HoneypotSpamProtector'
+```
+
+Then enable spam protection on your form by calling `Form::enableSpamProtection()`.
+
+```php
+public function ExampleForm()
+{
+    $form = new ExampleForm($this, 'Example');
+
+    $form->enableSpamProtection();
+
+    return $form;
+}
+```
 
 ## Testing
 
