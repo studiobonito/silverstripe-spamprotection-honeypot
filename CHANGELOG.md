@@ -3,6 +3,8 @@
 All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will be documented in this file
 
 ## [Unreleased]
+
+## [1.1.0] - 2015-09-28
 ### Added
 - Included changelog.
 - Included `.gitattributes` file.
@@ -31,5 +33,6 @@ All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will 
 ### Changed
 - Excluded methods from code coverage calculations.
 
-[Unreleased]: https://github.com/studiobonito/silverstripe-spamprotection-honeypot/compare/1.0.1...HEAD
+[Unreleased]: https://github.com/studiobonito/silverstripe-spamprotection-honeypot/compare/1.1.0...HEAD
+[1.1.0]: https://github.com/studiobonito/silverstripe-spamprotection-honeypot/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/studiobonito/silverstripe-spamprotection-honeypot/compare/1.0.0...1.0.1
