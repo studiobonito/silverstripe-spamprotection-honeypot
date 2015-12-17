@@ -3,6 +3,8 @@
 All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will be documented in this file
 
 ## [Unreleased]
+### Added
+- Updated module to work with SilverStripe 3.2.
 
 ## [1.1.0] - 2015-09-28
 ### Added

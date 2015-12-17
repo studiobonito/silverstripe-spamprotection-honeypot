@@ -15,7 +15,7 @@ Also invalidate submissions that respond to quickly.
 
 ## Requirements
 
-- SilverStripe 3.1 or newer.
+- SilverStripe 3.1.0 and newer or 3.2 and newer.
 - SilverStripe [SpamProtection](https://github.com/silverstripe/silverstripe-spamprotection) 1.2 or newer.
 
 ## Install
