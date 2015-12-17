@@ -15,7 +15,7 @@ Also invalidate submissions that respond to quickly.
 
 ## Requirements
 
-- SilverStripe 3.1 or newer.
+- SilverStripe 3.1.0 and newer or 3.2 and newer.
 - SilverStripe [SpamProtection](https://github.com/silverstripe/silverstripe-spamprotection) 1.2 or newer.
 
 ## Install
@@ -80,7 +80,7 @@ If you discover any security related issues, please email support@studiobonito.c
 
 The BSD-2-Clause License. Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/github/release/studiobonito/silverstripe-spamprotection-honeypot.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/studiobonito/silverstripe-spamprotection-honeypot.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-BSD-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/studiobonito/silverstripe-spamprotection-honeypot/master.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/studiobonito/silverstripe-spamprotection-honeypot.svg?style=flat-square
