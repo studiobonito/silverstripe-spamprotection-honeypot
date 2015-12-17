@@ -1,8 +1,10 @@
 # Changelog
 
-All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will be documented in this file
+All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will be documented in this file.
 
 ## [Unreleased]
+
+## [1.1.1] - 2015-12-17
 ### Added
 - Updated module to work with SilverStripe 3.2.
 - Included `.editorconfig` file.
@@ -36,6 +38,7 @@ All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will 
 ### Changed
 - Excluded methods from code coverage calculations.
 
-[Unreleased]: https://github.com/studiobonito/silverstripe-spamprotection-honeypot/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/studiobonito/silverstripe-spamprotection-honeypot/compare/1.1.1...HEAD
+[1.1.1]: https://github.com/studiobonito/silverstripe-spamprotection-honeypot/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/studiobonito/silverstripe-spamprotection-honeypot/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/studiobonito/silverstripe-spamprotection-honeypot/compare/1.0.0...1.0.1
