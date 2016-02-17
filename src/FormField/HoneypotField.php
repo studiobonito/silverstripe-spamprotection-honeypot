@@ -8,6 +8,7 @@ class HoneypotField extends \HiddenField
      * The number of seconds before you can submit a valid request.
      *
      * @var int
+     * @config
      */
     private static $time_limit = 5;
 
@@ -20,7 +21,7 @@ class HoneypotField extends \HiddenField
      */
     public function validate($validator)
     {
-        $timeLimit = $this->stat('time_limit');
+        $timeLimit = $this->config()->time_limit;
 
         $timestamp = $this->getForm()->getController()->getRequest()->postVar($this->getName() . '_Timestamp');
 
