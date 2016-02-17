@@ -57,6 +57,16 @@ public function ExampleForm()
 }
 ```
 
+You can change the amount time that is checked to see if the response is made too quickly with the following configuration.
+
+```yaml
+StudioBonito\SilverStripe\SpamProtection\Honeypot\FormField\HoneypotField:
+  time_limit: 1
+```
+
+This example changes the time to 1 second. The default is set to 5 seconds.
+
+
 ## Testing
 
 ```bash
