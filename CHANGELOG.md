@@ -4,6 +4,10 @@ All Notable changes to `studiobonito/silverstripe-spamprotection-honeypot` will 
 
 ## [Unreleased]
 
+## [1.1.2] - 2016-02-17
+### Fixed
+- Updated the `$time_limit` variable to be overridden via the YML config.
+
 ## [1.1.1] - 2015-12-17
 ### Added
 - Updated module to work with SilverStripe 3.2.
