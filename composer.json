@@ -41,5 +41,8 @@
         "psr-4": {
             "StudioBonito\\SilverStripe\\SpamProtection\\Honeypot\\Tests\\": "tests"
         }
+    },
+    "support": {
+        "issues": "https://github.com/studiobonito/silverstripe-spamprotection-honeypot/issues"
     }
 }
