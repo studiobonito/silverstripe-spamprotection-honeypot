@@ -116,7 +116,7 @@ class HoneypotField extends \HiddenField
      *
      * @return string
      */
-    protected function getFieldStyle()
+    public function getFieldStyle()
     {
       $default_css_rule = 'display:none!important';
       $css_rule = \Config::inst()->get(__CLASS__, 'field_style_rule');
