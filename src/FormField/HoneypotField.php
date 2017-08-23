@@ -83,7 +83,7 @@ class HoneypotField extends \HiddenField
                 'id'    => $this->ID(),
                 'name'  => $this->getName(),
                 'value' => $this->Value(),
-                'style' => 'display:none!important',
+                'style' => $this->getFieldStyle(),
             )
         );
     }
@@ -104,8 +104,26 @@ class HoneypotField extends \HiddenField
                 'id'    => $this->ID() . '_Timestamp',
                 'name'  => $this->getName() . '_Timestamp',
                 'value' => time(),
-                'style' => 'display:none!important',
+                'style' => $this->getFieldStyle(),
             )
         );
+    }
+    
+    /**
+     * Return a configured style rule for the fields, if none is configured use a default display:none rule
+     *
+     * @codeCoverageIgnore
+     *
+     * @return string
+     */
+    public function getFieldStyle()
+    {
+      $default_css_rule = 'display:none!important';
+      $css_rule = \Config::inst()->get(__CLASS__, 'field_style_rule');
+      if(!$css_rule) {
+        return $default_css_rule;
+      } else {
+        return $css_rule;
+      }
     }
 }

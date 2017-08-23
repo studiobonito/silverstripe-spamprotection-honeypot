@@ -43,6 +43,32 @@ class HoneypotFieldTest extends \PHPUnit_Framework_TestCase
 
         $this->assertTrue($valid);
     }
+    
+    public function testCustomStyleAttribute()
+    {
+        $styleRule = "position:absolute!important;left:-9000px!important;";
+        \Config::inst()->update('StudioBonito\SilverStripe\SpamProtection\Honeypot\FormField\HoneypotField', 'field_style_rule', $styleRule);
+        
+        $honeypotField = new HoneypotField('Captcha');
+        $honeypotField->setValue(null);
+        
+        $styleAttribute = $honeypotField->getFieldStyle();
+        
+        $this->assertEquals($styleRule, $styleAttribute);
+    }
+    
+    public function testDefaultStyleAttribute()
+    {
+        $defaultStyleRule = 'display:none!important';
+        \Config::inst()->remove('StudioBonito\SilverStripe\SpamProtection\Honeypot\FormField\HoneypotField', 'field_style_rule');
+        
+        $honeypotField = new HoneypotField('Captcha');
+        $honeypotField->setValue(null);
+        
+        $styleAttribute = $honeypotField->getFieldStyle();
+        
+        $this->assertEquals($defaultStyleRule, $styleAttribute);
+    }
 
     /**
      * @return m\MockInterface
