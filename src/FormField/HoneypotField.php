@@ -1,8 +1,10 @@
 <?php namespace StudioBonito\SilverStripe\SpamProtection\Honeypot\FormField;
 
-use FormField;
+use SilverStripe\View\HTML;
+use SilverStripe\Core\Config\Config;
+use SilverStripe\Forms\TextField;
 
-class HoneypotField extends \HiddenField
+class HoneypotField extends TextField
 {
     /**
      * The number of seconds before you can submit a valid request.
@@ -42,6 +44,19 @@ class HoneypotField extends \HiddenField
     }
 
     /**
+     * Since this isn't a hidden field, the title will continue to show in the form.
+     * This prevents that from happening, since a hidden field will not show the validation message.
+     *
+     * @codeCoverageIgnore
+     *
+     * @return string
+     */
+    public function Title()
+    {
+        return '';
+    }
+
+    /**
      * Override the Type to remove the class namespace.
      *
      * @codeCoverageIgnore
@@ -76,7 +91,7 @@ class HoneypotField extends \HiddenField
      */
     protected function createHoneypotField()
     {
-        return FormField::create_tag(
+        return HTML::createTag(
             'input',
             array(
                 'type'  => 'text',
@@ -97,7 +112,7 @@ class HoneypotField extends \HiddenField
      */
     protected function createTimestampField()
     {
-        return FormField::create_tag(
+        return HTML::createTag(
             'input',
             array(
                 'type'  => 'text',
@@ -118,12 +133,12 @@ class HoneypotField extends \HiddenField
      */
     public function getFieldStyle()
     {
-      $default_css_rule = 'display:none!important';
-      $css_rule = \Config::inst()->get(__CLASS__, 'field_style_rule');
-      if(!$css_rule) {
-        return $default_css_rule;
-      } else {
-        return $css_rule;
-      }
+        $default_css_rule = 'display:none!important';
+        $css_rule = Config::inst()->get(__CLASS__, 'field_style_rule');
+        if (!$css_rule) {
+            return $default_css_rule;
+        } else {
+            return $css_rule;
+        }
     }
 }

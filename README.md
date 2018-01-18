@@ -40,7 +40,7 @@ Create a configuration file `spamprotection.yml` in `mysite/_config` with the fo
 ---
 name: spamprotection
 ---
-FormSpamProtectionExtension:
+SilverStripe\SpamProtection\Extension\FormSpamProtectionExtension:
   default_spam_protector: '\StudioBonito\SilverStripe\SpamProtection\Honeypot\SpamProtector\HoneypotSpamProtector'
 ```
 
