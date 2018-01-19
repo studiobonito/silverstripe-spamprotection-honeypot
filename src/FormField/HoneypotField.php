@@ -1,8 +1,9 @@
 <?php namespace StudioBonito\SilverStripe\SpamProtection\Honeypot\FormField;
 
-use SilverStripe\View\HTML;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Forms\TextField;
+use SilverStripe\View\HTML;
+use SilverStripe\ORM\FieldType\DBHTMLText;
 
 class HoneypotField extends TextField
 {
@@ -79,7 +80,9 @@ class HoneypotField extends TextField
      */
     public function Field($properties = array())
     {
-        return $this->createHoneypotField() . $this->createTimestampField();
+        $field = DBHTMLText::create($this->getName());
+        $field->setValue($this->createHoneypotField() . $this->createTimestampField());
+        return $field;
     }
 
     /**
