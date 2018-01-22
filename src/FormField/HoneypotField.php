@@ -1,8 +1,11 @@
 <?php namespace StudioBonito\SilverStripe\SpamProtection\Honeypot\FormField;
 
-use FormField;
+use SilverStripe\Core\Config\Config;
+use SilverStripe\Forms\TextField;
+use SilverStripe\View\HTML;
+use SilverStripe\ORM\FieldType\DBHTMLText;
 
-class HoneypotField extends \HiddenField
+class HoneypotField extends TextField
 {
     /**
      * The number of seconds before you can submit a valid request.
@@ -42,6 +45,19 @@ class HoneypotField extends \HiddenField
     }
 
     /**
+     * Since this isn't a hidden field, the title will continue to show in the form.
+     * This prevents that from happening, since a hidden field will not show the validation message.
+     *
+     * @codeCoverageIgnore
+     *
+     * @return string
+     */
+    public function Title()
+    {
+        return '';
+    }
+
+    /**
      * Override the Type to remove the class namespace.
      *
      * @codeCoverageIgnore
@@ -64,7 +80,9 @@ class HoneypotField extends \HiddenField
      */
     public function Field($properties = array())
     {
-        return $this->createHoneypotField() . $this->createTimestampField();
+        $field = DBHTMLText::create($this->getName());
+        $field->setValue($this->createHoneypotField() . $this->createTimestampField());
+        return $field;
     }
 
     /**
@@ -76,14 +94,14 @@ class HoneypotField extends \HiddenField
      */
     protected function createHoneypotField()
     {
-        return FormField::create_tag(
+        return HTML::createTag(
             'input',
             array(
                 'type'  => 'text',
                 'id'    => $this->ID(),
                 'name'  => $this->getName(),
                 'value' => $this->Value(),
-                'style' => 'display:none!important',
+                'style' => $this->getFieldStyle(),
             )
         );
     }
@@ -97,15 +115,33 @@ class HoneypotField extends \HiddenField
      */
     protected function createTimestampField()
     {
-        return FormField::create_tag(
+        return HTML::createTag(
             'input',
             array(
                 'type'  => 'text',
                 'id'    => $this->ID() . '_Timestamp',
                 'name'  => $this->getName() . '_Timestamp',
                 'value' => time(),
-                'style' => 'display:none!important',
+                'style' => $this->getFieldStyle(),
             )
         );
+    }
+    
+    /**
+     * Return a configured style rule for the fields, if none is configured use a default display:none rule
+     *
+     * @codeCoverageIgnore
+     *
+     * @return string
+     */
+    public function getFieldStyle()
+    {
+        $default_css_rule = 'display:none!important';
+        $css_rule = Config::inst()->get(__CLASS__, 'field_style_rule');
+        if (!$css_rule) {
+            return $default_css_rule;
+        } else {
+            return $css_rule;
+        }
     }
 }
