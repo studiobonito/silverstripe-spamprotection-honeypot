@@ -1,0 +1,3 @@
+fr:
+  HoneypotField:
+    SPAM: 'Votre soumission a été rejetée car elle a été traitée comme un spam.'
