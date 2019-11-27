@@ -1,8 +1,12 @@
-<?php namespace StudioBonito\SilverStripe\SpamProtection\Honeypot\SpamProtector;
+<?php
 
+namespace StudioBonito\SilverStripe\SpamProtection\Honeypot\SpamProtector;
+
+use SilverStripe\Forms\FormField;
+use SilverStripe\SpamProtection\SpamProtector;
 use StudioBonito\SilverStripe\SpamProtection\Honeypot\FormField\HoneypotField;
 
-class HoneypotSpamProtector implements \SpamProtector
+class HoneypotSpamProtector implements SpamProtector
 {
     /**
      * Return the {@link FormField} associated with this protector.
@@ -18,7 +22,7 @@ class HoneypotSpamProtector implements \SpamProtector
      * @param string $title
      * @param mixed  $value
      *
-     * @return \FormField The resulting field
+     * @return FormField The resulting field
      */
     public function getFormField($name = null, $title = null, $value = null)
     {
@@ -32,6 +36,5 @@ class HoneypotSpamProtector implements \SpamProtector
      */
     public function setFieldMapping($fieldMapping)
     {
-        //
     }
 }
